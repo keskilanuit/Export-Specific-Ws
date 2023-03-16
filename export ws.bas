@@ -1,18 +1,19 @@
 Attribute VB_Name = "Module1"
-Sub Export_FVs()
+Sub Export_ws()
 
 
     ' Set the path for the export folder
     Dim exportPath As String
-    exportPath = "C:\Users\keskilin\Documents\_Motor Fuel Tax\Return Practice\_Practice\_FVs\"
+    exportPath = "C:\Users\keskilin\Documents\you_path\"
     
     ' Loop through each worksheet to export
     Dim ws As Worksheet
     For Each ws In ThisWorkbook.Worksheets
     
         ' Check if the worksheet name should be exported
-        If ws.Name = "FV60" Or ws.Name = "FV65" Then
-       
+    If ws.Name = "wsname" Or ws.Name = "wsname" Then
+        'add more Or ws.name = " " ' as needed           
+        
             ' Create the file name for the exported worksheet
             Dim fileName As String
             fileName = ThisWorkbook.Name & " - " & ws.Name & ".xlsx"
